@@ -26,7 +26,7 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'localhostjgfkjgfjhffy',
+        'hostname'     => 'localhost',
         'username'     => 'root',
         'password'     => '',
         'database'     => 'juego_db',
