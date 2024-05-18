@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Filters;
 
 use CodeIgniter\Filters\FilterInterface;
@@ -28,8 +29,8 @@ class AuthFilter implements FilterInterface
      */
     public function before(RequestInterface $request, $arguments = null)
     {
-        $key = getenv('JWT_SECRET');
-        $header = $request->getHeaderLine("Authorization"); // Corrected method getHeaderLine
+        $key = getenv ('JWT_SECRET');
+        $header = $request->getHeaderline("Authorization"); 
         $token = null;
 
         if (!empty($header)) {
