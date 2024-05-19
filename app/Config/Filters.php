@@ -32,8 +32,8 @@ class Filters extends BaseConfig
         'secureheaders' => SecureHeaders::class,
         'authFilter'    => \App\Filters\AuthFilter::class,
         //'forcehttps'    => ForceHTTPS::class,
-        //'pagecache'     => PageCache::class,
-        //'performance'   => PerformanceMetrics::class,
+        //'pagecache'     => \CodeIgniter\Filters\PageCache::class, 
+       //'performance'   => PerformanceMetrics::class,
     ];
 
     /**
