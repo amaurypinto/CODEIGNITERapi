@@ -12,6 +12,7 @@ use CodeIgniter\Filters\InvalidChars;
 //use CodeIgniter\Filters\PageCache;
 //use CodeIgniter\Filters\PerformanceMetrics;
 use CodeIgniter\Filters\SecureHeaders;
+use PHPUnit\Framework\TestSize\Unknown;
 
 class Filters extends BaseConfig
 {
@@ -28,12 +29,10 @@ class Filters extends BaseConfig
         'csrf'          => CSRF::class,
         'toolbar'       => DebugToolbar::class,
         'honeypot'      => Honeypot::class,
-        'invalidchars'  => InvalidChars::class,
-        'secureheaders' => SecureHeaders::class,
+        'invalidchars'  => InvalidChars::class, 
+        'secureheaders' => SecureHeaders::class, 
         'authFilter'    => \App\Filters\AuthFilter::class,
-        //'forcehttps'    => ForceHTTPS::class,
-        //'pagecache'     => \CodeIgniter\Filters\PageCache::class, 
-       //'performance'   => PerformanceMetrics::class,
+        
     ];
 
     /**

@@ -5,7 +5,6 @@ namespace App\Controllers;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\API\ResponseTrait;
 use App\Models\UserModel;
-use Config\Email;
 use Firebase\JWT\JWT;
 
 class Login extends BaseController
@@ -23,8 +22,7 @@ class Login extends BaseController
             return $this->respond(['error' => 'invalid username or password.'], 401);
         }
 
-        $spw_verify = password_verify($password, $user['password']);
-        if (!$spw_verify) {
+        if (!password_verify($password, $user['password'])) {
             return $this->respond(['error' => 'invalid username or password.'], 401);
         }
 

@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Filters;
 
 use CodeIgniter\Filters\FilterInterface;
@@ -8,7 +7,7 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Exception;
 use Firebase\JWT\JWT;
-use Firebase\JWT\Key;
+use Firebase\JWT\Key; // Asegúrate de importar Key correctamente
 
 class AuthFilter implements FilterInterface
 {
@@ -29,8 +28,8 @@ class AuthFilter implements FilterInterface
      */
     public function before(RequestInterface $request, $arguments = null)
     {
-        $key = getenv ('JWT_SECRET');
-        $header = $request->getHeaderline("Authorization"); // Corrected method getHeaderLine
+        $key = getenv('JWT_SECRET');
+        $header = $request->getHeaderLine("Authorization"); // Corrected method getHeaderLine
         $token = null;
 
         if (!empty($header)) {
